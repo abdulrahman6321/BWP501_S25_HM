@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>الفعاليات - دليل الجامعة الافتراضية</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #222;
+  }
+  /* تصنيفات */
+  .category-btn {
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 16px;
+  }
+  .category-btn:hover,
+  .category-btn.active {
+    filter: brightness(0.85);
+  }
+  .category-fun { background: #ffe4f5; color: #d0537f; }
+  .category-edu { background: #ffe5ca; color: #d19944; }
+  .category-family { background: #fff2c2; color: #8a7d49; }
+  .category-music { background: #eedefc; color: #7f4fd0; }
+  .category-sport { background: #dff8e8; color: #3da355; }
+  .category-culture { background: #cce5ff; color: #2a6fdb; }
+
+  /* كروت الفعاليات */
+  .card {
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  }
+  .card-img-top {
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    height: 200px;
+  }
+  .btn-view-details {
+    font-weight: 600;
+  }
+
+</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">دليل فعاليات الجامعة</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">الرئيسية</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">الفعاليات</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">عن الدليل</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container pt-5 mt-3">
+
+  <!-- التصنيفات -->
+  <h3 class="mb-4">التصنيفات</h3>
+  <div class="d-flex flex-wrap gap-3 justify-content-center mb-5">
+    <button class="category-btn category-fun active" data-cat="">🎨 فن</button>
+    <button class="category-btn category-edu" data-cat="تعليم">🎓 تعليم</button>
+    <button class="category-btn category-family" data-cat="عائلي">👨‍👩‍👧‍👦 عائلي</button>
+    <button class="category-btn category-music" data-cat="موسيقي">🎵 موسيقى</button>
+    <button class="category-btn category-sport" data-cat="رياضة">⚽ رياضة</button>
+    <button class="category-btn category-culture" data-cat="ثقافة">📚 ثقافة</button>
+  </div>
+
+  <!-- أحدث الفعاليات -->
+  <h3 class="mb-4">أحدث الفعاليات</h3>
+  <div id="eventsGrid" class="row g-4">
+    <!-- بطاقة فعالية 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400" class="card-img-top" alt="حفل الموسيقى الكلاسيكية" />
+        <div class="card-body">
+          <h5 class="card-title">حفل الموسيقى الكلاسيكية</h5>
+          <p class="card-text text-muted">أمسية موسيقية رائعة تقدمها أوركسترا الجامعة بأعمال كلاسيكية عالمية.</p>
+          <p><small class="text-muted">التاريخ: 2026-05-23</small></p>
+          <a href="events.html" class="btn btn-primary w-100">عرض التفاصيل</a>
+        </div>
+      </div>
+    </div>
+    <!-- بطاقة فعالية 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400" class="card-img-top" alt="يوم العائلة الجامعي" />
+        <div class="card-body">
+          <h5 class="card-title">يوم العائلة الجامعي</h5>
+          <p class="card-text text-muted">فعالية عائلية تشمل ألعاب وفقرات ترفيهية ومسابقات متنوعة.</p>
+          <p><small class="text-muted">التاريخ: 2026-05-28</small></p>
+          <a href="events.html" class="btn btn-primary w-100">عرض التفاصيل</a>
+        </div>
+      </div>
+    </div>
+    <!-- بطاقة فعالية 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?w=400" class="card-img-top" alt="ندوة التراث الثقافي" />
+        <div class="card-body">
+          <h5 class="card-title">ندوة التراث الثقافي</h5>
+          <p class="card-text text-muted">ندوة تُناقش التراث الثقافي العربي وأهميته في بناء الهوية.</p>
+          <p><small class="text-muted">التاريخ: 2026-05-30</small></p>
+          <a href="events.html" class="btn btn-primary w-100">عرض التفاصيل</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
